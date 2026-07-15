@@ -1,4 +1,4 @@
-# Einfache Datenvisualisierungen am Beispiel der  Brownsche Bewegung
+# Einfache Datenvisualisierungen am Beispiel der  Brownschen Bewegung
 
 visualization_basics: Erste Schritte bei der Datenvisualisierung; Visualisierung mathematischer Funktionen und der Brownschen Bewegung in 1D
 
