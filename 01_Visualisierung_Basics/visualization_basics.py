@@ -5,7 +5,7 @@
 # 
 # Grundlagen der Datenvisualisierung mit Matplotlib: Einfache Visualisierung von Funktionen und Daten.
 # 
-# Die benötigten Pythonmodule numpy und matplotlib sind in den meisten Installation schon mit dabei; für Teil 2 muss Scipy dazu installiert werden. Installieren von Scipy mit Anaconda (im Anaconda Prompt (Windows) oder Terminal (Linux oder MacOS):
+# Die benötigten Pythonmodule **NumPy** und **MatPlotLib** sind in den meisten Installation schon dabei; für Teil 2 dieses Notebooks muss **SciPy** dazu installiert werden. Installieren von SciPy mit Anaconda (im Anaconda Prompt (Windows) oder Terminal (Linux oder MacOS):
 # 
 #     conda install scipy
 # 
@@ -19,14 +19,14 @@
 # In[1]:
 
 
-#Numpy importieren
+#NumPy importieren
 import numpy as np
 
 
 # In[2]:
 
 
-# Matplotlib importieren
+# MatPlotLib importieren
 import matplotlib.pyplot as plt
 
 
@@ -106,7 +106,7 @@ plt.show
 # Link zum SciPy Cookbook:
 # https://scipy-cookbook.readthedocs.io/items/BrownianMotion.html
 # 
-# Von Scipy wird die Funktion scipy.stats.norm() benötigt: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html
+# Von SciPy wird die Funktion scipy.stats.norm() benötigt: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html
 # Damit können normalverteilte Zufallszahlen generiert werden.
 
 # In[9]:

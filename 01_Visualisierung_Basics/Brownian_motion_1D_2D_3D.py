@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Datenvisualisierung mit Python/Matplotlib: 1D, 2D und 3D
+# # Datenvisualisierung mit Python/MatPlotLib: 1D, 2D und 3D
 # 
 # Beispiel: Simulation der Brownschen Bewegung in einer, zwei und drei Dimensionen. Die Zeitachse ist als weitere Dimension auch immer Teil der Visualisierung.
 # 
-# Die benötigten Module Numpy und MatPlotLib sind in den meisten Standardinstallation schon mit dabei; das Modul muss Scipy zusätzlich installiert werden.Installieren von Scipy mit Anaconda (im Anaconda Prompt (Windows) oder Terminal (Linux oder MacOS):
+# Die benötigten Module **NumPy** und **MatPlotLib** sind in den meisten Standardinstallation schon dabei; das Modul **SciPy** muss zusätzlich installiert werden. Installieren von SciPy mit Anaconda (im Anaconda Prompt (Windows) oder Terminal (Linux oder MacOS):
 # 
 #     conda install scipy
 # 
@@ -15,21 +15,21 @@
 # In[1]:
 
 
-#Numpy importieren
+#NumPy importieren
 import numpy as np
 
 
 # In[2]:
 
 
-# Matplotlib importieren
+# MatPlotLib importieren
 import matplotlib.pyplot as plt
 
 
 # In[3]:
 
 
-# Scipy: benötigte Funktionen importieren
+# SciPy: benötigte Funktionen importieren
 from scipy.stats import norm
 
 
@@ -98,7 +98,7 @@ m = 10 # Anzahl Realisierungen (Trajektorien)
 
 # Initialisieren und Trajektorien Berechnen
 x = np.empty((m,n+1)) # Array initialisieren
-# Anfangsbedingungen für x
+# Anfangsbedingungen für x (Startpunkt)
 x[:, 0] = 0.0
 # Trajektorien Berechnen
 brownian(x[:,0], n, dt, delta, out=x[:,1:])
@@ -146,7 +146,7 @@ x = np.zeros((nD,n+1))
 # In[10]:
 
 
-# Berechnen der trajektorie
+# Berechnen der Trajektorie
 brownian(x[:,0], n, dt, delta, out=x[:,1:])
 
 
