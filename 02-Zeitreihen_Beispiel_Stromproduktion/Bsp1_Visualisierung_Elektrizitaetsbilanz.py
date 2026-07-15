@@ -10,13 +10,13 @@
 # Datenquelle: Bundesamt für Energie
 # Webseite: https://opendata.swiss/de/dataset/schweizerische-elektrizitatsstatistik-schweizerische-elektrizitatsbilanz-monatswerte
 # 
-# Zeitpunkt der Abfrage: 28.07.2025
+# Zeitpunkt der Abfrage: 15.07.2026
 # 
 # Format: CSV (.csv)
 
 # ## 1. Einlesen und Organisation der Daten
 # 
-# Zum importieren von CSV-Files kann das Modul Pandas verwendet werden.
+# Zum importieren von CSV-Files kann das Modul **Pandas** verwendet werden.
 # https://pandas.pydata.org/
 # 
 # 
@@ -36,7 +36,7 @@ import pandas as pd
 
 # #### Datenfile lesen und anzeigen
 # 
-# Pandas stellt Reader für verschiedene Formate zur Verfügung. Der entsprechende Reader read_csv() wird ausgewählt und bekommt als parameter den Filenamen. Die Daten werden dann im Dataframe df gespeichert.
+# Pandas stellt Reader für verschiedene Formate zur Verfügung. Der entsprechende Reader read_csv() wird ausgewählt und bekommt als Parameter den Filenamen. Die Daten werden dann im Dataframe df gespeichert.
 
 # In[2]:
 
@@ -86,7 +86,7 @@ df['Endverbrauch_GWh'][::12]
 # In[7]:
 
 
-# Matplotlib zum erstellen der Grafiken
+# Matplotlib zum Erstellen der Grafiken
 import matplotlib.pyplot as plt
 
 
@@ -161,7 +161,7 @@ plt.title("Endverbrauch im Januar nach Jahr") # Titel des Plots
 plt.show()
 
 
-# ### Visualisierung 4: Erzeugung, Einfuhr, Ausfuhr und Endverbrauch gegen Jahr auftragen
+# ### Visualisierung 4: Erzeugung, Einfuhr, Ausfuhr und Endverbrauch im Januar gegen Jahr auftragen
 # 
 # Zur Vereinfachung wird dafür hier nur jeder 12. Datenpunkt verwendet, jeweils der erste Monat des Jahres.
 
@@ -183,7 +183,7 @@ plt.ylabel('Endverbrauch [GWh]') # Beschriftung y-Achse
 
 plt.legend(['netto Erzeugung', 'Einfuhr', 'Ausfuhr', 'Endverbrauch'])
 
-plt.title("Erzeugung, Einfuhr, Ausfuhr und Endverbrauch") # Titel des Plots
+plt.title("Erzeugung, Einfuhr, Ausfuhr und Endverbrauch im Januar") # Titel des Plots
 
 plt.show()
 

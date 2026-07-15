@@ -12,7 +12,7 @@
 # Datenquelle: Bundesamt für Energie
 # Webseite: https://opendata.swiss/dataset/energiedashboard-ch-stromproduktion-swissgrid
 # 
-# Zeitpunkt der Abfrage: 28.07.2025
+# Zeitpunkt der Abfrage: 15.07.2026
 # 
 # Format: CSV (.csv)
 
@@ -236,41 +236,41 @@ plt.show()
 
 # Um die Zeitreihen besser vergleichen zu können werden die x- und y- Achsen zur Visualisierung angeglichen.
 
-# In[14]:
+# In[13]:
 
 
 # Matplotlib subplots
 f, axs = plt.subplots(6,1, figsize=(15, 20)) # Definieren der Subplots
 
 lx1 = '2016-01-01' # unteres Limit x-Achse
-lx2 = '2025-06-01' # oberes Limit x-Achse
+lx2 = '2026-07-01' # oberes Limit x-Achse
 ly1 = -10.0   # unteres Limit y-Achse
 ly2 = 160.0 # oberes Limit y-Achse
 
 plt.subplot(6, 1, 1) # Subplot Stromproduktion aus Flusskraft
 plt.plot(df_fluss['Datum'],df_fluss['Produktion_GWh'])
-plt.xticks(df_fluss['Datum'][0::400])
+plt.xticks(df_fluss['Datum'][0::500])
 plt.xlim(lx1,lx2)
 plt.ylim(ly1,ly2)
 plt.legend(['Flusskraft'])
 
 plt.subplot(6, 1, 2) # Subplot Stromproduktion aus Kernkraft
 plt.plot(df_kern['Datum'],df_kern['Produktion_GWh'])
-plt.xticks(df_kern['Datum'][0::400])
+plt.xticks(df_kern['Datum'][0::500])
 plt.xlim(lx1,lx2)
 plt.ylim(ly1,ly2)
 plt.legend(['Kernkraft'])
 
 plt.subplot(6, 1, 3) # Subplot Stromproduktion aus Speicherkraft
 plt.plot(df_speicher['Datum'],df_speicher['Produktion_GWh'])
-plt.xticks(df_speicher['Datum'][0::400])
+plt.xticks(df_speicher['Datum'][0::500])
 plt.xlim(lx1,lx2)
 plt.ylim(ly1,ly2)
 plt.legend(['Speicherkraft'])
 
 plt.subplot(6, 1, 4) # Subplot Stromproduktion aus Thermischen Kraftwerken
 plt.plot(df_therm['Datum'],df_therm['Produktion_GWh'])
-plt.xticks(df_therm['Datum'][0::400])
+plt.xticks(df_therm['Datum'][0::500])
 plt.legend(['Thermische'])
 plt.xlim(lx1,lx2)
 plt.ylim(ly1,ly2)
@@ -278,14 +278,14 @@ plt.ylabel('Stromproduktion [GWh]')
 
 plt.subplot(6, 1, 5) # Subplot Stromproduktion aus Photovoltaik
 plt.plot(df_photo['Datum'],df_photo['Produktion_GWh'])
-plt.xticks(df_photo['Datum'][0::400])
+plt.xticks(df_photo['Datum'][0::500])
 plt.xlim(lx1,lx2)
 plt.ylim(ly1,ly2)
 plt.legend(['Photovoltaik'])
 
 plt.subplot(6, 1, 6) # Subplot Stromproduktion aus Windkraft
 plt.plot(df_wind['Datum'],df_wind['Produktion_GWh'])
-plt.xticks(df_wind['Datum'][0::400])
+plt.xticks(df_wind['Datum'][0::500])
 plt.xlim(lx1,lx2)
 plt.ylim(ly1,ly2)
 plt.legend(['Wind'])
