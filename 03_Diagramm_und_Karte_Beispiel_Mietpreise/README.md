@@ -4,7 +4,7 @@ mietpreis_diagramme: verschiedene Histogramme und Tortendiagramm
 
 mietpreis_kartendarstellung: Kombination der Mietpreise mit Geodaten und Darstellung auf Karte
 
-Benötigte Python Module: Matplotlib, Numpy, Pandas, GeoPandas
+Benötigte Python Module: MatPlotLib, NumPy, Pandas, GeoPandas
 
 Benötigte Daten: 
 
