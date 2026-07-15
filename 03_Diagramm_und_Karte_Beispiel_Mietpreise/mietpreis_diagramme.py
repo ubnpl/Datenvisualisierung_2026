@@ -6,14 +6,14 @@
 # ## Datenbeispiel: Durchschnittlicher Mietpreis Schweiz nach Zimmerzahl und Kanton
 # 
 # Datenquelle: Bundesamt für Statistik
-# Webseite Datensatz: https://opendata.swiss/de/dataset/durchschnittlicher-mietpreis-in-franken-nach-zimmerzahl-und-kanton3
-# Datum Download: 28.07.2025
+# Webseite Datensatz: https://opendata.swiss/de/dataset/durchschnittlicher-mietpreis-in-franken-nach-zimmerzahl-und-kanton2
+# Datum Download: 15.07.2026
 # 
 # Format: Microsoft Excel (.xlsx)
 
 # ### Lesen des .xlsx-files
 # 
-# Zum importieren von Excel-Files kann das Modul Pandas verwendet werden.
+# Zum importieren von Excel-Files kann das Modul **Pandas** verwendet werden.
 # https://pandas.pydata.org/
 # 
 # 
@@ -65,8 +65,8 @@ df
 # In[5]:
 
 
-# Zweite Seite des Excel-Files mit Namen "2020" einlesen
-df2 = pd.read_excel('je-d-09.03.03.01.xlsx', sheet_name="2022", header=4)
+# Zweite Seite des Excel-Files mit Namen "2023" einlesen
+df2 = pd.read_excel('je-d-09.03.03.01.xlsx', sheet_name="2023", header=4)
 
 
 # In[6]:
@@ -82,7 +82,7 @@ df2
 
 # Zweite Seite mit überspringen der Definierten Reihen einlesen
 # Uebersprungene Reihen definieren mit "Skiprows"
-df1s = pd.read_excel('je-d-09.03.03.01.xlsx', sheet_name="2023", header=4, skiprows=[32,33,34,35,36,37,38,39,40,41,42])
+df1s = pd.read_excel('je-d-09.03.03.01.xlsx', sheet_name="2024", header=4, skiprows=[32,33,34,35,36,37,38,39,40,41,42])
 
 
 # In[8]:
@@ -116,7 +116,7 @@ df1s['Durch-schnittlicher Mietpreis ']
 df1s['Durch-schnittlicher Mietpreis '][2:7]
 
 
-# ## Visualisierung der Daten mit Matplotlib: Histogramme
+# ## Visualisierung der Daten mit MatPlotLib: Histogramme
 # 
 # Visualisierung der durschnittlichen Mitpreise für alle Kantone und den schweizer Durschnitt als Histogramm
 
@@ -140,7 +140,7 @@ import numpy as np
 # 
 # Einfachster Fall: einen einzelnen Datensatz als Histogramm visualisieren. Die Kantonsnamen werden auf der x-Achse aufgetragen, die Höhe der Mietpreise auf der y-Achse.
 
-# In[14]:
+# In[15]:
 
 
 plt.figure().set_figheight(5)   # Höhe der Grafik
@@ -153,7 +153,7 @@ plt.bar(df1s['Unnamed: 0'], df1s['Durch-schnittlicher Mietpreis '])  # Barplot e
 plt.xlabel('Kanton') # Beschriftung x-Achse
 plt.ylabel('Durchschnittlicher Mietpreis [CHF]')  # Beschriftung y-Achse
 
-plt.legend(['Mietpreis 2023']) # Datensatz beschriften
+plt.legend(['Mietpreis 2024']) # Datensatz beschriften
 plt.xticks(rotation=90) # Labels um 90 Grad drehen
 
 plt.title("Visualisierung 1: Durschnittlicher Mietpreis")
@@ -165,7 +165,7 @@ plt.show()
 # 
 # Für den Vergleich zweier Datensätze können verschiedene Darstellung gewählt werden. Zuerst werden die Datensätze übereinander dargestellt, das heisst der zweite Datensatz wird über dem ersten angezeigt.
 
-# In[15]:
+# In[16]:
 
 
 plt.figure().set_figheight(5)   # Höhe der Grafik
@@ -188,7 +188,7 @@ plt.show()
 # 
 # Die Darstellung der Datensätze nebeneinander ist übersichtlicher. Allerding muss der Abstand der Datensätze bestimmt werden.
 
-# In[16]:
+# In[17]:
 
 
 # Berechnen des Abstands zum Visualisieren der Datensätze
@@ -219,14 +219,14 @@ plt.show()
 
 # #### Information aus dem Dataframe bekommen und Datenpunkte weglassen
 
-# In[17]:
+# In[18]:
 
 
 # Informationen zum Kanton sind im df2_a verfügbar
 df1s['Unnamed: 0']
 
 
-# In[18]:
+# In[19]:
 
 
 # Den ersten Datenpunkt (Schweiz) weglassen (alle anderen auswählen)
@@ -235,7 +235,7 @@ df1s['Durch-schnittlicher Mietpreis '][1:]
 
 # #### Tortendiagramm: Mietpreise anteilig nach Kantonen
 
-# In[19]:
+# In[20]:
 
 
 fig = plt.figure(figsize=(22,22)) # Grösse der Grafik

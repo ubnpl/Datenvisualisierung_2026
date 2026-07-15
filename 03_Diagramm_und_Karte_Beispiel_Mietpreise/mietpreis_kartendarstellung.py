@@ -6,14 +6,14 @@
 # ## Datenbeispiel: Durchschnittlicher Mietpreis nach Zimmerzahl und Kanton
 # 
 # Datenquelle: Bundesamt für Statistik
-# Webseite Datensatz: https://opendata.swiss/de/dataset/durchschnittlicher-mietpreis-in-franken-nach-zimmerzahl-und-kanton3
-# Datum Download: 28.07.2025
+# Webseite Datensatz: https://opendata.swiss/de/dataset/durchschnittlicher-mietpreis-in-franken-nach-zimmerzahl-und-kanton2
+# Datum Download: 15.07.2026
 # 
 # Format: Microsoft Excel (.xlsx)
 
 # ### Lesen des .xlsx-files
 # 
-# Zum importieren von Excel-Files kann das Modul Pandas verwendet werden.
+# Zum importieren von Excel-Files kann das Modul **Pandas** verwendet werden.
 # https://pandas.pydata.org/
 # 
 # 
@@ -47,7 +47,7 @@ from pandas import ExcelFile
 
 # Zweite Seite mit überspringen der Definierten Reihen einlesen
 # Uebersprungene Reihen definieren mit "Skiprows"
-df1s = pd.read_excel('je-d-09.03.03.01.xlsx', sheet_name="2023", header=4, skiprows=[32,33,34,35,36,37,38,39,40,41,42])
+df1s = pd.read_excel('je-d-09.03.03.01.xlsx', sheet_name="2024", header=4, skiprows=[32,33,34,35,36,37,38,39,40,41,42])
 
 
 # In[4]:
@@ -60,7 +60,7 @@ df1s
 # 
 # Die Mietpreise der Schweiz werden auf einer Schweizer Karte angezeigt. Dazu ist die Kombination mit entsprechende Geodaten notwendig.
 
-# #### Module für die Visualisierung importieren: Geopandas und Matplotlib
+# #### Module für die Visualisierung importieren: GeoPandas und MatPlotLib
 # 
 # Matplotlib wird weitering benötigt.
 
@@ -71,7 +71,7 @@ df1s
 import matplotlib.pyplot as plt
 
 
-# Geographische Visualisierung der Daten mit GeoPandas:
+# Geographische Visualisierung der Daten mit **GeoPandas**:
 #     
 # [https://geopandas.org](https://geopandas.org)
 #     
