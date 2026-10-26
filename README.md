@@ -1,5 +1,5 @@
 # Beispiele Datenvisualisierung 2026
-Jupyter Notebooks zur Vorlesung Datenkompetenz. Beispiele für die Visualisierung öffentlich zugänglicher Datensätze mit Python/Jupyter Notebooks.
+Jupyter Notebooks zur Vorlesung Datennutzung. Beispiele für die Visualisierung öffentlich zugänglicher Datensätze mit Python/Jupyter Notebooks.
 
 Verwendete Python Version: 3.9 oder höher
 
