@@ -8,9 +8,9 @@
 # ### Datenbeispiel: Stromproduktion in der Schweiz
 # 
 # Datenquelle: Bundesamt für Energie
-# Webseite: https://opendata.swiss/de/dataset/schweizerische-elektrizitatsstatistik-schweizerische-elektrizitatsbilanz-monatswerte
+# Webseite: https://opendata.swiss/en/dataset/enstat-elektrizitatsbilanz-der-schweiz-monatswerte-csv
 # 
-# Zeitpunkt der Abfrage: 15.07.2026
+# Zeitpunkt der Abfrage: 26.10.2026
 # 
 # Format: CSV (.csv)
 
